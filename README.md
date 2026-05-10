@@ -29,7 +29,7 @@ A modern and responsive personal portfolio website built using **Vanilla HTML, C
 ---
 
 ## 📂 Project Structure
-'''bash
+```bash
 portfolio/
 │
 ├── index.html
