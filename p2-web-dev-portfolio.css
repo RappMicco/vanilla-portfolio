@@ -1,0 +1,997 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    background-color: #FF9B45;
+    color: #062925;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+        background-color: #121E28; 
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        padding: 8px;
+        animation: focus-in-contract 1s ease-in;
+    }
+
+    @keyframes focus-in-contract {			
+		0% {
+			transform:translateY(-50px);
+            opacity:0;
+		}
+		100% {
+			transform:translateY(0);
+            opacity:1;
+		}
+	}
+
+        /* Mobile View */
+@media screen and (min-width: 360px) {
+    .headerContainer {
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .headerContainer > div:last-child {
+        justify-self: end;          
+    }
+
+    .btnSideBar {
+        border: 0;
+        cursor: pointer;
+        transition-duration: 200ms; 
+    }
+
+    #icnSideBar {
+        background: none;
+        margin-right: -5px;
+        width: 32px;
+        height: 32px;
+        transition: transform 200ms ease;
+    }
+
+    #icnSideBar:hover {
+        transform: scale(1.30);
+    }
+
+    /*--------------------------------------- Sidebar ---------------------------------------------------------*/
+    .sideBar {
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        position: fixed;   
+        top: 0; 
+        right: 0;
+        z-index: 5;
+        
+    } 
+
+    #sideBar {
+        background: #121E28;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform 0.50s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.50s ease;
+    } 
+
+     .sideBar a {
+        font-size: 10px;
+        color: #fcfbfb;
+        text-decoration: none;
+        background-color: transparent;
+        padding: 14px;
+        display: block;
+    } 
+
+    .sideBarSection {
+        display: flex;
+        text-align: center; 
+        transition: background-color 0.2s ease-in;
+    } 
+
+    .sideBarSection:hover {
+        background-color: rgba(45, 212, 191, .3);
+    } 
+
+    .btnCloseSideBar {
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+        cursor: pointer;
+        padding: 8px 0 0 10px;
+    }
+    
+    #icnSideBarClose {
+        height: 15px;
+        width: 15px;
+        transition: transform 200ms ease;
+    }
+
+    #icnSideBarClose:hover {
+        transform: scale(1.30);
+        box-shadow: 0 0 7px rgb(45, 212, 190);
+        border-radius: 50%;
+    } 
+
+    /* -------------------------toggle checked HIDE ------------------------- */
+     #toggleSideBar:checked ~ nav #sideBar {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #fullName {
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    #toggleSideBar:checked ~ .headerContainer #fullName {
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+    } 
+
+    /* --------------------------------------About me skills projects awards spacing -------------------------------------*/
+
+    #aboutSection {
+        scroll-margin-top: 145px; 
+    }
+
+    #skillSection {
+        scroll-margin-top: 165px;
+    }
+
+    #workSection {
+        scroll-margin-top: 172px;
+    }
+
+    #projSection {
+        scroll-margin-top: 170px;
+    }
+
+    #acadsSection {
+        scroll-margin-top: 180px;
+    }
+
+    #contact {
+        scroll-margin-top: 10px;
+    }
+
+    /* ----------------Hello, I'm Rapp Micco, Full Stack Web Develop, Buttons Design------------- */
+    .profileHeader {
+        background-color: #121E28; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 4;
+    }
+
+    #greet::after {
+        content: " .";
+        color:  #FF6B5C;
+    }
+
+    #introName {
+        font-size: 20px;
+    }
+
+    .introNameContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 0 6px 0;
+    }
+
+    #introNameLine {
+        width: 100px;
+        padding-top: 5px;
+        color:  #FF6B5C;
+    }
+
+    #hrLine {
+        border: none;
+        width: 100px;
+        height: 3px;
+        background-color:  #FF6B5C;
+    }
+
+    .btnContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 10px 0 10px 0;
+    }
+
+    .btnProjResume {
+        background-color: #FF6B5C;
+        font-family: 'Montserrat', sans-serif;
+        border: none;
+        width: 120px;
+        height: 40px;
+        cursor: pointer;
+        color: white;
+        font-weight: 600;
+        transition: transform 200ms ease;
+        border-radius: 5px;
+    }
+
+    .btnProjResume a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .btnProjResume:hover {
+        transform: scale(1.20);
+        box-shadow: 0 0 7px rgba(247, 246, 246, 0.9);
+    }
+
+    #resumeColor {
+        background-color: transparent;
+        border: 1px solid #FF6B5C;
+    }
+
+    #resumeColor a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* ---------------------Rapp Micco Image Design------------------------ */
+    .imgContainer {
+        position: relative;
+        min-height: 54vh;
+        background:
+        radial-gradient(circle at center,rgba(255, 95, 70, 0.45), rgba(255, 95, 70, 0.2) 30%, #121E28  70%, #121E28  100%
+        );
+    }
+
+    .mainImage {
+        background-color: transparent;
+        position: relative;
+        height: 900px;
+        left: 40px;
+        z-index: 1; 
+    }
+
+    .shape {
+        position: absolute;
+        opacity: 0.6;
+        width: 140px;
+        z-index: 1;
+    }
+
+   .lessThan {
+        rotate: 12deg;
+        background-color: transparent;
+        top: 40px;
+        left: 5px;
+    }
+
+    .partition {
+        background-color: transparent;
+        bottom: 80px;
+        right: 70px;
+        rotate: 185deg;
+    }
+
+    .greaterThan {
+        background-color: transparent;
+        bottom: 100px;
+        right: -10px;
+        rotate: 185deg;
+    }
+
+    .close {
+        position: absolute; 
+        opacity: 0.4;
+        width: 140px;
+        z-index: 1;
+    }
+
+    .imgRapp {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        height: 60vh;
+    }
+    
+    #imgRappMicco {
+        background-color: transparent;
+        mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+        filter:  drop-shadow(0 2px 1px rgba(233, 231, 228, 0.87));
+        z-index: 1;
+        border: none;
+        animation-delay: 0.5s;
+    }
+
+     /*---------------- Social Media Icon------------------- */
+    .socialLinkContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        border-radius: 8px;
+        padding-top: 3px; 
+        height: 70px;
+        background-color: #17232D;
+        overflow: visible;  
+    } 
+
+    .social-link img {
+       background-color: #17232D;
+       height: 50px;
+       cursor: pointer;
+       transition: transform 200ms ease;
+    } 
+
+    .social-link:hover img {
+        transform: scale(1.20); 
+        box-shadow: 0 0 20px rgb(247, 246, 246);
+        border-radius: 50%; 
+    } 
+
+
+    /* -------------- About Me -------------------- */
+
+    .aboutMe {
+        padding: 60px 0 40px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about {
+        padding-bottom: 20px;
+    }
+
+    #aboutDetails {
+        padding: 0 10px 25px 10px;;
+    }
+
+     #aboutDetails p {
+        text-indent: 50px;
+        text-align: justify;
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: 1.6;
+        
+     }
+
+    /* About me sub-container */
+    .countProj {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 43px;
+    }
+
+    .titleSize {
+        padding-bottom: 9px;
+    }
+
+    .completed {
+        text-align: center;
+    }
+
+    .title span {
+        display: block;
+    }
+
+    #plus::after {
+        content: "+";
+        color:  #FF6B5C;
+    }
+
+    #percent::after {
+        content: " %";
+        color: #FF6B5C;
+        font-size: 18px;
+    }
+
+    /* -------- Work experience ------------- */
+    .workExp {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(45, 212, 191, .1);
+        border-radius: 5px;
+        border: 1px solid #ebe9e88d;
+        padding: 15px;
+    }
+
+    #workDesc p {
+        text-align: left;
+        text-align: justify;
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: 1.6;
+    }
+
+    .comName {
+        padding: 0 0 27px 0;
+    }
+
+    .cardHeaderLink {
+        text-decoration: none;
+    }
+
+    .anchorText {
+        font-weight: 560;
+        color: white;
+        text-decoration: none;
+        transition-duration: 200ms;
+    }
+
+    .anchorText .arrow {
+        display: inline-block; 
+        transition: transform 0.3s ease;
+    }
+
+    .anchorText:hover .arrow {
+        transform: translateX(8px);
+    }
+
+    .arrowColor:hover {
+        color: #FF6B5C;
+        text-shadow: 0 0 20px rgb(247, 246, 246);
+    }
+
+    #workDesc {
+        text-align: center;
+    } 
+
+    /* ------------------------------ Skills ------------------------------------- */
+    .skillBar {
+        display: none;
+    }
+
+    .componentSkills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skillContainer {
+        display: flex;
+        flex-direction: column; 
+        padding: 15px;
+        background-color: rgba(45, 212, 191, .1);
+        border-radius: 5px;
+        border: 1px solid #ebe9e88d;
+    }
+
+    .skillHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 10px 40px 10px;
+    }
+
+    .feWeight {
+        font-weight: 560;
+    }
+
+    .toolsContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0; 
+        gap: 40px;
+    }
+
+    .toolsBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0 40px 0;
+    }
+
+
+    /* --------------------------------------My Projects--------------------------------------------------------------- */
+    .projectMain {
+        padding: 0;
+    }
+
+    .projectsContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 50px;
+    }
+
+    .myProjDetails {
+        padding-top: 13px;
+        height: 300px;;
+        /* flip image */
+        perspective: 1000px;
+    }
+
+    /* flip image */
+    .flipCardInner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .myProjDetails:hover .flipCardInner {
+        transform: rotateY(180deg);
+    }
+
+    .flipCardFront, .flipCardBack {
+        position: absolute;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flipCardBack {
+        transform: rotateY(180deg);
+    }
+
+    /* end flip image */
+
+    .projectsPadding {
+        padding: 15px;
+        background-color: rgba(45, 212, 191, .1);
+        border-radius: 5px;
+        border: 1px solid #ebe9e88d;
+
+    }
+
+    .myProjDetails img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        border: 1px solid #cfcdcc;
+        border-radius: 10px;
+    }
+
+    .myProjDesc {
+        text-align: center;
+        padding: 10px 0 12px 0;
+    }
+
+    .myProjDesc p {
+        text-align: justify;
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: 1.6;
+    }
+
+    .tagContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .tag p {
+        display: flex;
+        border-radius: 0.5rem;
+        background-color: rgba(45, 212, 191, .1);
+        padding: 0.25rem 0.5rem;
+        color: #f5f5f5f1;
+    }
+
+
+    .tag {
+        background: rgba(45, 212, 191, .1);
+        border-radius: 0.5rem;
+    }
+
+    .githubSection a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .githubSection:hover p {
+       color: #FF6B5C;
+       text-shadow: 0 0 30px rgb(247, 246, 246);
+    }
+
+    /* Tooltip */
+    .githubSection {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .toolTipText {
+        visibility: hidden;
+        width: 150px;
+        background-color: #121E28; 
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+        width: 130px;
+        top: 100%;
+        left: 50%;
+        margin-left: -65px;
+        border: 1px solid #ff6c5c69;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+   .toolTipText::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+    }
+
+    .githubSection:hover .toolTipText {
+        visibility: visible;
+    }
+
+    /* ------------------------------------------------------ Contact Me ------------------------------------------------ */
+    .contactContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 5px 100px 5px;
+        
+    }
+
+    .contactDetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: transparent;
+        padding: 10px 25px 10px 25px;
+        background-color: rgba(45, 212, 191, .1);
+        border-radius: 5px;
+        border: 1px solid #ebe9e88d;
+        margin-top: 20px;
+    }
+
+    .contactData {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0 5px 0;
+        
+    }
+
+    .formName h4 {
+        background: transparent;
+    }
+
+    .formName {
+        padding: 10px 0 10px 0;
+    }
+
+    .formContainer {
+        display: flex;  
+        flex-direction: column;
+    }
+
+    .inputName {
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 5px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .msgInput {
+        height: 100px;
+        font-size: 17px;
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #btnSubmit {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btnSend {
+        background-color: #121E28;
+        font-family: 'Montserrat', sans-serif;
+        border: 1px solid white;
+        width: 120px;
+        height: 40px;
+        font-weight: 600;
+        transition: transform 200ms ease;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btnSend a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .btnSend:hover {
+        transform: scale(1.20);
+        box-shadow: 0 0 7px rgba(247, 246, 246, 0.9);
+    }
+
+    .contactData {
+        display: flex;
+    }
+
+    .mailDetails {
+        padding: 20px 0 20px 20px;
+    }
+
+   .footerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        background: #0c141b;
+        gap: 0.3rem;
+        padding: 20px 0 20px 0;
+        border-radius: 10px;
+   }
+
+   .anchorText {
+        text-decoration: none;
+        transition: 200ms;
+        cursor: pointer;
+   }
+
+   .footerContainer p {
+        color: #f2f3f4be;
+        text-align: center;
+   }
+
+    .anchorText:hover {
+        color: #FF6B5C;
+    }
+
+}
+
+/* Desktop View */
+@media screen and (min-width: 800px) {
+    body {
+        padding-top: 20px;
+    }
+
+
+    .heroContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+     #fullName {
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+
+    .headerContainer #fullName {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: none;
+    }
+
+    #toggleSideBar {
+        display: none;
+    }
+    
+    .sideBar {
+        padding: 10px 15px 0 0;
+        background: transparent;
+        position: absolute;   
+        top: 0; 
+        right: 0;
+   
+    } 
+
+    #sideBar {
+        transform: translateX(0);
+        opacity: 1;
+        background: transparent;
+        gap: 5px;
+    } 
+
+    #sideBar a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .btnSideBar {
+        display: none;;
+    }
+
+    .btnCloseSideBar {
+        display: none;
+    }
+
+    header hr {
+         display: none;
+    }
+
+    #greet {
+        font-size: 70px;
+    }
+
+    .profileHeader {
+        padding-bottom: 80px;
+        background-color: transparent;
+        position: static;
+    }
+
+    #introName {
+        font-size: 25px;
+    }
+
+    .introNameContainer  {
+        padding: 10px 0 10px 0;
+    }
+
+    .introNameContainer h2  {
+        font-size: 40px;
+    }
+    
+    .btnContainer {
+        padding: 15px 0 10px 0;
+    }
+
+    #heroName {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    .lessThan {
+        left: 80px;
+        rotate: 30deg;
+    }
+
+    .greaterThan {
+        rotate: 210deg;
+        bottom: 20px;
+    }
+
+    .partition {
+        bottom: 30px;
+        right: 80px;
+    }
+
+    .rightContainer {
+       padding: 0 20px 0 20px;
+    }
+
+    .componentSkills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .toolsBlock {
+        flex-direction: row;
+        padding: 40px 50px 5px 40px;
+        gap: 50px;
+    }
+
+    .toolsContainer {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 60px;
+        gap: 1px;
+    }
+
+    .feWeight {
+        font-size: 23px;
+    }
+
+    .skillBar {
+        display: flex;
+        width: 900px;
+        background-color: rgba(45, 212, 191, .1);
+
+    }
+
+    .skills {
+        text-align: right;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+    }
+
+    #barGap {
+        padding-left: 20px;
+        gap: 40px;
+
+    }
+
+    #languageGap {
+        padding-left: 5px;
+        gap: 25px;
+
+    }
+
+    /* Skill Bar Width and Color */
+    .html {width: 85%; background-color: #d85c0e;}
+    .css {width: 80%; background-color: #2196F3;}
+    .react {width: 65%; background-color: #0feaee;}
+    .js {width: 85%; background-color: rgba(255, 255, 0, 0.75);}  
+    .c {width: 80%; background-color: #808080;}   
+    .sql {width: 55%; background-color: #d85c0e;}
+    .postgre {width: 45%; background-color: #2196F3;}
+    .mongoDb {width: 55%; background-color: #3af321;}
+    .powerApps {width: 55%; background-color: #d80ec4;}
+    .powerAutomate {width: 55%; background-color: #2196F3;}
+    .nihongoBar {width: 35%; background-color: #808080;}
+
+    /* About Me */
+    .countProj {
+        gap: 60px;
+    }
+
+    /* My projects */
+    .projectsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        align-items: stretch; 
+    }
+
+    #acadsSection {
+        display: flex;
+       
+    }
+
+    .projectsPadding {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: rgba(45, 212, 191, .1);
+        border-radius: 5px;
+        border: 1px solid #ebe9e88d;
+        padding: 20px;
+    }
+
+    .myProjDetails {
+        height: 300px;          
+        overflow: hidden;
+        border-radius: 10px;   
+    }
+
+    .myProjDetails img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;      
+    }
+
+    .myProjDesc {
+        flex-grow: 1;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    #aboutDetails {
+        padding: 0 25px 0 25px;
+    }
+
+} 
+

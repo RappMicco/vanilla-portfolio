@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p2-web-dev-portfolio</title>
+
+    <link rel="stylesheet" href="p2-web-dev-portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+         <input type="checkbox" id="toggleSideBar" hidden>
+            <div class="headerContainer">
+                <div>
+                    <!-- Header Name-->
+                    <h3 id="fullName">Rapp Micco Rizo</h3>
+                </div>
+                <!-- hamburger btn -->
+                <div>
+                    <!-- <button class="btnSideBar"> -->
+                    <label for="toggleSideBar" class="btnSideBar">
+                        <img id="icnSideBar" src="icon/menu (2).png" alt="HamburgerButton">
+                    </label>
+                </div>
+            </div>
+
+            <nav>
+                <!-- Sidebar Button -->
+                <div id="sideBar" class="sideBar">
+                    <!-- <button class="btnCloseSideBar"> -->
+                    <label for="toggleSideBar" class="btnCloseSideBar">
+                        <img id="icnSideBarClose" src="public/close.png" alt="Close Button Thumbnail">
+                    </label>
+                    <!-- </button> -->
+                    <a class="sideBarSection" href="#aboutSection">About me</a>
+                    <a class="sideBarSection" href="#workSection" >Work Experience</a>
+                    <a class="sideBarSection" href="#skillSection">Skills</a>
+                    <a class="sideBarSection" href="#projSection">My projects</a>
+                    <a class="sideBarSection" href="#acadsSection">Academic Awards</a>
+                </div>
+            </nav>
+
+            <!-- underLine -->
+            <hr>
+            
+        </header>
+
+        <main>
+            <div class="heroContainer">
+                <!-- Hello, I'm Rapp Micco, Full Stack Web Develop, Buttons -->
+                <div class="profileHeader">
+                    <div class="introNameContainer">
+                        <h2 id="greet">Hello</h2>
+                    </div>
+
+                    <div class="introNameContainer" id="heroName">
+                        <!-- I'm Rapp Micco Header-->
+                        <div>
+                            <p id="introName"> I'm Rapp Micco</p>
+                        </div>
+                        <!--  underline -->
+                        <div id="introNameLine">
+                            <hr id="hrLine">
+                        </div>
+                    </div>
+
+                    <div class="introNameContainer">
+                        <h2>Full Stack Web Developer</h2>
+                    </div>
+                    <!-- Button Container -- Got a project & My Resume-->
+                    <div class = "btnContainer">
+                        <button class="btnProjResume"> 
+                            <a href="#contact">Got a project?</a>
+                        </button> 
+                        <button class="btnProjResume" id="resumeColor">
+                            <a href="public/Rapp.pdf" target="_blank">My resume</a>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Rapp Micco Image -->
+                <div class="imgContainer">
+                    <!-- less-than -->
+                    <img src="icon/lessthanimg.png"
+                        class="shape lessThan"
+                        alt="less than">
+                    <!-- greater-than -->
+                    <img src="icon/lessthanimg.png"
+                        class="shape greaterThan"
+                        alt="greater than">
+                        
+                    <!-- Close Tag-->
+                    <img src="icon/partition(3).png"
+                        class="close partition"
+                        alt="Close tag">
+
+                    <div class="imgRapp">
+                        <img  id="imgRappMicco" src="icon/rappnobackg.png" alt="Rapp Micco">
+                    </div>
+                    
+                </div>  
+            </div>
+
+        <!-- social media icon -->
+        <section>
+            <div class="socialLinkContainer">
+                <a class="social-link" href="https://www.linkedin.com/in/rappmicco-rizo/" target="_blank">
+                    <img src="icon/linkedin.png" alt="linkedIn">
+                </a>
+
+                <a class="social-link" href="https://gitlab.com/rappmiccorizo07" target="_blank">
+                    <img src="icon/gitlab.png" alt="Gitlab">
+                </a>
+
+                <a class="social-link" href="https://github.com/RappMicco/RappMicco_ProjectRepo" target="_blank">
+                    <img src="icon/github.png" alt="Github">
+                </a>
+            </div>
+        </section>
+
+        <!-- About me -->
+        <div class="aboutMe" id="aboutSection">
+            <div class="details about">
+                <h1>About me</h1>
+            </div>
+            <div class="details" id="aboutDetails">
+                <p>I started my web development journey at Uplift Code Camp, where I gained solid foundational knowledge and hands-on experience in building websites. Throughout this learning process, I explored HTML, CSS, JavaScript, and modern web development practices, which strengthened my interest in creating functional and user-friendly web applications.
+                As I continued learning, I realized that web development is the career path I want to pursue for my long-term growth. My eagerness to learn motivates me to consistently improve my skills, work on personal projects, and apply what I’ve learned through practice. I enjoy solving problems, refining designs, and turning ideas into working solutions.
+                I am committed to continuous learning and self-improvement, and I aim to grow further as a web developer by building meaningful projects and expanding my technical skills.</p>
+            </div>
+            <!--About me Sub-Container-->
+            <div class="countProj">
+                <!--Completed Projects-->
+                <div class="completed">
+                    <h2 class="titleSize" id="plus">6</h2>
+                    <p class="title">
+                        <span>Completed</span>
+                        <span>Projects</span>
+                    </p>
+                </div>
+                <!--Client Satisfaction-->
+                <div class="completed">
+                    <h2 class="titleSize" id="percent">95</h2>
+                    <p class="title">
+                        <span>Client</span>
+                        <span>Satisfaction</span>
+                    </p>
+                </div>
+                <!-- Years of experience-->
+                <div class="completed">
+                    <h2 class="titleSize" id="plus">1</h2>
+                    <p class="title">
+                        <span>Work</span>
+                        <span>Experience</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="rightContainer">
+            <div class="expSkillsContainer">
+                <!-- Work Experience -->
+                  <div class="skillHeader">
+                    <h1>Work Experience</h1>
+                </div>
+                <div class="workExp" id="workSection">
+                <!-- Company Name and Date -->
+                    <div class="comName">
+                        <a class="cardHeaderLink" href="https://www.denso-ten.com/?fbclid=IwY2xjawOWkcdleHRuA2FlbQIxMABicmlkETFMd3JKYzVPUVJ5b3k3cXZrc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHijFJd0nnB_OU6t4TmsgIgf2gv0rOL60lw3EmdleQtSg2pjU1gJ73G-alkx3_aem_99wZ9AqUjUGAR6In5dZ4VQ" target="_blank">
+                            <p class="anchorText arrowColor">Denso Ten Solution Philippines Corporation 
+                                <span class="arrow arrowColor">&rarr;</span>
+                            </p>
+                        </a>
+                        <p class="title">
+                            <span>Associate Software Engineer</span> 
+                            <span>August 2024 ~ Present</span>  
+                        </p>
+                    </div>
+                    <!-- Work Description -->
+                    <div class="details" id="workDesc">
+                        <p>
+                            I am a Software Engineer responsible for supporting and maintaining production systems, as well as developing applications used in the production environment. I handle system monitoring, troubleshooting, and continuous improvement initiatives. 
+                            I have experience using C#, Apache NiFi for data migration, and Microsoft Power Apps and Power Automate for building automated and efficient solutions. I work closely with team members to deliver stable and reliable systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Header -->
+            <div class="skillHeader">
+                    <h1>Skills</h1>
+            </div>
+            <div class="skillContainer" id="skillSection">
+                <!-- Skills Details-->
+                <div class="skillDescContainer">
+                    <!--front-header-->
+                    <div class="skillTitle">
+                        <p class="feWeight">Front-end:</p>
+                    </div>
+                    <!-- HTML CSS REACT JS Container-->
+                    <div class="toolsContainer">
+                        <!-- HTML-->
+                        <div class="toolsBlock">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-html-5-48.png" alt="HTML">
+                                <p>HTML</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills html">85%</div>
+                            </div>
+                        </div>
+
+
+                        <div class="toolsBlock">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-css-48.png" alt="CSS">
+                                <p>CSS</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills css">80%</div>
+                            </div>
+                        </div>
+
+                        <div class="toolsBlock">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-react-48.png" alt="REact">
+                                <p>React</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills react">70%</div>
+                            </div>
+                        </div>
+
+                        <div class="toolsBlock">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-js.gif" alt="JS">
+                                <p>JS</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills js">85%</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Back-end header-->
+                    <div class="skillTitle">
+                        <p class="feWeight">Back-end:</p>
+                    </div>
+                    <!-- JS & C# Container-->
+                    <div class="toolsContainer">
+                        <!-- JS -->
+                        <div class="toolsBlock">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-js.gif" alt="JS">
+                                <p>JS</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills js">85%</div>
+                            </div>
+                        </div>
+                            
+                        
+                        <!-- C#-->
+                        <div class="toolsBlock">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-c-48.png" alt="C#">
+                                <p>C#</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills c">80%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skillTitle">
+                        <p class="feWeight">Databases:</p>
+                    </div>
+                    <!-- MySQL, MongoDB Postgre Container-->
+                    <div class="toolsContainer">
+                        <!-- mySQL -->
+                        <div class="toolsBlock">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-mysql-logo-48.png" alt="MySQL">
+                                <p>MySQL</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills sql">60%</div>
+                            </div>
+                        </div>
+                            
+                        <!-- Postgre -->
+                        <div class="toolsBlock">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-postgresql-48.png" alt="Postgre">
+                                <p>PSQL</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills postgre">40%</div>
+                            </div>
+                        </div>
+
+                        <!-- MongoDB -->
+                        <div class="toolsBlock">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-mongodb-48.png" alt="MongoDB">
+                                <p>Mongo</p>
+                                <p>DB</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills mongoDb">60%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Automation -->
+                    <div class="skillTitle">
+                        <p class="feWeight">Automation:</p>
+                    </div>
+                    <!-- Powerapps & Power automate-->
+                    <div class="toolsContainer">
+                        <!-- Powerapps -->
+                        <div class="toolsBlock">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-microsoft-power-apps-2020-48.png" alt="Powerapps">
+                                <p>Power</p>
+                                <p>Apps</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills powerApps">60%</div>
+                            </div>
+                        </div>
+                            
+                        <!-- Power Automate -->
+                        <div class="toolsBlock" id="barGap">
+                            <div class="componentSkills">
+                                <img src="icon/icons8-microsoft-power-automate-2020-48.png" alt="Power Automate">
+                                <p>Power</p>
+                                <p>Automate</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills powerAutomate">60%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Skills -->
+                    <div class="skillTitle">
+                        <p class="feWeight">Additional Skills:</p>
+                    <div>
+                    
+                    <div class="toolsContainer">
+                        <div class="toolsBlock" id="languageGap">
+                            <div class="componentSkills">
+                                <p id="languageId">Basic Nihongo</p>
+                                <p>(Japanese)</p>
+                            </div>
+
+                            <div class="skillBar">
+                                <div class="skills nihongoBar">30%</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="projectMain">
+            <!-- My Projects Header Text-->
+            <div class="skillHeader">
+                <h1>My Projects</h1>
+            </div>
+            <!-- My Projects -->
+            <div class="projectsContainer" id="projSection">
+                <!-- Second Project CRM-->
+                <div class="projectsPadding">
+                    <!-- Project Image -->
+                    <div class="myProjDetails">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">  
+                                <img src="public/CRM Login.png" alt="Login">
+                            </div>
+
+                            <div class="flipCardBack">
+                                <img src="public/CRM Transaction Form.png" alt="CRM Thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Description -->
+                    <div class="myProjDesc">
+                        <h3>Client Relationship Management</h3><br>
+                        <p>This CRM (Client Relationship Management) system is designed to centralize and manage client records, including inquiries and project requests such as system development projects. The system provides maintenance features that allow administrators to create, edit, and update client information, ensuring accurate and organized data management.</p>
+                    </div>
+                    <!-- Projects Tools-->
+                    <div class="tagContainer">
+                        <div class="tag">
+                            <p>C#</p>
+                        </div>
+
+                        <div class="tag">
+                            <p>SSMS</p>
+                        </div>
+
+                        <div class="tag githubSection">
+                            <a href="https://github.com/RappMicco/RappMicco_ProjectRepo" target="_blank"><p>Github
+                                <!-- Tooltip -->
+                                <span class="toolTipText">Click here to view my CRM project</span>
+                            </p></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Joegen Farm Ordering System-->
+                <div class="projectsPadding">
+                    <!-- Project Image -->
+                    <div class="myProjDetails">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">
+                                <img src="public/JPF.png" alt="JF Ordering System Thumbnail">
+                            </div>
+
+                            <div class="flipCardBack">
+                                <img src="public/joegenfarm.png" alt="JF Ordering System Thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Description -->
+                    <div class="myProjDesc">
+                        <h3>JPF Ordering System</h3><br>
+                        <p>
+                            JPF (Joegen Piggery Farm Ordering System) is a web-based application developed to automate and manage affiliate order transactions for a piggery farm. The system replaces the former manual process where orders were handwritten in notebooks and calculations were performed manually, resulting in inefficiencies and potential errors.
+                            JPF provides automated order computation, PDF generation for downloadable order summaries, and centralized data management. It implements user authentication with secure login and user registration functionalities. Additionally, the system supports full CRUD (Create, Read, Update, Delete) operations to ensure accurate and maintainable records.
+                        </p>
+                    </div>
+                    <!-- Projects Tools-->
+                    <div class="tagContainer">
+                        <div class="tag">
+                            <p>C#</p>
+                        </div>
+
+                        <div class="tag">
+                            <p>SQL Server Mgt. Studio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Academic Awards -->
+        <div class="skillHeader">
+            <h1>Academic Awards</h1>
+        </div>
+        <div class="projectsContainer" id="acadsSection">
+            <div class="projectsPadding">
+                <!-- Project Image -->
+                <div class="myProjDetails" id="projImage">
+                    <img src="public/WISE.jpg" alt="Faith Lift Console App">
+                </div>
+                <!-- Project Description -->
+                <div class="myProjDesc">
+                    <h3>"WISE"</h3>
+                    <h4>Wi-Fi Integrated Smart home using ESP32 and ESP-RainMaker</h4><br>
+                    <p>
+                        WISE (Wi-Fi Integrated Smart Home using ESP32 and ESP-Rainmaker) is a smart home system designed to help homeowners manage electrical devices efficiently, reduce electricity costs, and improve home safety—especially for seniors and individuals who are frequently away from home. The system enables real-time monitoring of electrical device usage and supports remote control from anywhere via internet connectivity.
+                        WISE integrates voice control through Google Assistant and Amazon Alexa, allowing users to turn devices on or off using voice commands. It features a user-friendly interface suitable for all age groups and implements secure remote access to ensure data privacy and prevent unauthorized device control.
+                    </p>
+                </div>
+                <!-- Awards Certificate -->
+                 <div class="tagContainer">
+                    <div class="tag githubSection">
+                        <a href="public/Best Thesis.jpg" target="_blank"><p>Best Thesis
+                            <!-- Tooltip -->
+                            <span class="toolTipText">Click here to view my awards</span>
+                        </p></a>                   
+                    </div>
+
+                    <div class="tag githubSection">
+                        <a href="public/Best Programmer Award.jpg" target="_blank"><p>Best Programmer
+                            <!-- Tooltip -->
+                            <span class="toolTipText">Click here to view my awards</span>
+                        </p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Contact me -->
+        <div class="contactContainer" id="contact">
+            <!-- Contact me Form -->
+            <div class="contactDetails">
+                <h1 class="contactData">Let's Work Together</h1>
+                <h2 class="contactData"> I'd love to hear from you!</h2>
+                <p class="contactData">If you have any inquiries or ideas in mind, feel free to reach out using contact form below.</p><br>
+
+                <form>
+                    <div class="formContainer">
+                        <label class="formName" for="txtName"><h4 class="formName">Name:</h4></label>
+                        <input type="text" id="txtName" name="txtName" class="inputName">
+                    </div>
+
+                    <div class="formContainer">
+                        <label class="formName" for="txtName"><h4 class="formName">Email:</h4></label>
+                        <input type="text" id="txtName" name="txtName" class="inputName">
+                    </div>
+
+                    <div class="formContainer">
+                        <label class="formName" for="txtName"><h4 class="formName">Message:</h4></label>
+                        <textarea type="text" id="txtName" name="txtName" class="msgInput"></textarea>
+                    </div>
+
+                    <div id="btnSubmit">
+                        <button class="btnSend"|> 
+                            <a href="mailto:rapp.miccorizo@gmail.com">Submit</a>
+                        </button> 
+                    </div>
+                </form>    
+            </div>
+
+            <!-- ContactDetails -->
+            <div class="contactDetails contact">  
+                <h1 class="contactData">Contact Me</h1><br>
+
+                <div class="formContainer">
+                    <h4>Email</h4>
+                </div>
+
+                <div class="formContainer mailDetails">
+                    <p>rappmicco.rizo@gmail.com</p>
+                </div>
+
+                <div class="formContainer">
+                    <h4>Contact Number</h4>
+                </div>
+
+                <div class="formContainer mailDetails">
+                    <p>+639568073811</p>
+                </div>
+            </div>
+        </div>   
+    </main>
+
+    <footer>
+        <div class="footerContainer">
+            <p>© 2025 Rapp Micco Rizo.</p>
+            <p>Built with HTML & CSS in Visual Studio Code · Deployed on <a href="https://rappmicco-porfolio.netlify.app/" target="_blank" class="anchorText">Netlify</a></p>
+            <p>Set in the Inter typeface.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
